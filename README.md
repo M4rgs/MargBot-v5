@@ -22,16 +22,16 @@ python2.7 mrgs.py
 ```
 #### Tools :
 <pre>
- 	[0] Bot Upload Shell
-	[1] Grabb Sites From Zone-h.org  
-	[2] Grabb Sites From Br.Zone-h.
-	[3] Grabb Sites From mirror-h.org     
-	[4] Grabb Sites From aljyyosh.org.com
-	[5] Get Sites bypass With List [Bypass Finder]
-	[6] Mass Add (http://) To List ^_^
-	[7] Grabber Sites From Bing :D (Dorks/IPs)
-	[8] Cms Filtre
-	[9] Email Valid Spotify
+[0] Bot Upload Shell
+[1] Grabb Sites From Zone-h.org  
+[2] Grabb Sites From Br.Zone-h.
+[3] Grabb Sites From mirror-h.org     
+[4] Grabb Sites From aljyyosh.org.com
+[5] Get Sites bypass With List [Bypass Finder]
+[6] Mass Add (http://) To List ^_^
+[7] Grabber Sites From Bing :D (Dorks/IPs)
+[8] Cms Filtre
+[9] Email Valid Spotify
 </pre>
 
 #### Features :
